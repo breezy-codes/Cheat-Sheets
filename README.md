@@ -17,7 +17,7 @@ Welcome to my collection of cheat sheets, I've gathered these during my subjects
 ## Repo Contents
 Each cheat sheet is detailed below with links to a downloadable PDF versions for your convenience:
 
-- `VS-Code-Shortcuts.md`: A collection of keyboard shortcuts for Visual Studio Code. You can also download the PDF version [here](VS-Code-Shortcuts.pdf).
+- [VS Code Shortcuts](VS-Code-Shortcuts.md): A collection of keyboard shortcuts for Visual Studio Code. You can also download the PDF version [here](VS-Code-Shortcuts.pdf).
 - `Pycharm-Shortcuts.md`: A collection of keyboard shortcuts for PyCharm. You can also download the PDF version [here](Pycharm-Shortcuts.pdf).
 - `Markdown.md`: A collection of markdown syntax for creating README files. You can also download the PDF version [here](Markdown.pdf).
 - `R-Language.md`: A collection of R programming language syntax and functions. You can also download the PDF version [here](R-Language.pdf).
