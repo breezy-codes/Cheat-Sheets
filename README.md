@@ -18,11 +18,11 @@ Welcome to my collection of cheat sheets, I've gathered these during my subjects
 Each cheat sheet is detailed below with links to a downloadable PDF versions for your convenience:
 
 - [VS Code Shortcuts](VS-Code-Shortcuts.md): A collection of keyboard shortcuts for Visual Studio Code. You can also download the PDF version [here](VS-Code-Shortcuts.pdf).
-- `Pycharm-Shortcuts.md`: A collection of keyboard shortcuts for PyCharm. You can also download the PDF version [here](Pycharm-Shortcuts.pdf).
-- `Markdown.md`: A collection of markdown syntax for creating README files. You can also download the PDF version [here](Markdown.pdf).
-- `R-Language.md`: A collection of R programming language syntax and functions. You can also download the PDF version [here](R-Language.pdf).
-- `Python-Language.md`: A collection of Python programming language syntax and functions. You can also download the PDF version [here](Python-Language.pdf).
-- `CPP-Language.md`: A collection of C++ programming language syntax and functions. You can also download the PDF version [here](CPP-Language.pdf).
+- [Pycharm Shortcuts](Pycharm-Shortcuts.md): A collection of keyboard shortcuts for PyCharm. You can also download the PDF version [here](Pycharm-Shortcuts.pdf).
+- [Markdown Cheatsheet](Markdown.md): A collection of markdown syntax for creating README files. You can also download the PDF version [here](Markdown.pdf).
+- [R Language Cheatsheet](R-Language.md): A collection of R programming language syntax and functions. You can also download the PDF version [here](R-Language.pdf).
+- [Python Language Cheatsheet](Python-Language.md): A collection of Python programming language syntax and functions. You can also download the PDF version [here](Python-Language.pdf).
+- [C++ Language Cheatsheet](CPP-Language.md): A collection of C++ programming language syntax and functions. You can also download the PDF version [here](CPP-Language.pdf).
 
 ## How to Use These Cheat Sheets
 These cheat sheets are best used as a side resource while you code. Keep them open on a second screen, or print out your favorites for quick access.
