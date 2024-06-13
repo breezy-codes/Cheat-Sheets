@@ -4,7 +4,7 @@
 
 ### **Compile Command**
 
-Using GNU, the compilation command is `g++` followed by the file name. Here, the name of the source file is **hello.cpp**.
+Using GNU, the compilation command is `g++` followed by the file name. Here, the name of the source file is **hello.cpp**
 
 ```cpp
 g++ hello.cpp
