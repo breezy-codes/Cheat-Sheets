@@ -1,5 +1,42 @@
 # Grep Commands Cheat Sheet
 
+## Options
+
+- `-i`: Ignore case (case-insensitive search)  
+- `-w`: Match whole word  
+- `-n`: Show line numbers  
+- `-c`: Count the number of matching lines  
+- `-v`: Invert match, show lines that do not match  
+- `-r`: Search files recursively in subdirectories  
+- `-l`: Show only the filenames of matching files  
+- `-h`: Do not show filenames in output  
+- `-e pattern`: Use pattern as the search pattern  
+- `-f file`: Read the search pattern from a file  
+- `-E`: Interpret the pattern as an extended regular expression  
+- `-P`: Interpret the pattern as a Perl-compatible regular expression  
+- `-m num`: Stop after finding num matches  
+- `-A num`: Show num lines of trailing context after the match  
+- `-B num`: Show num lines of leading context before the match  
+- `-C num`: Show num lines of context before and after the match  
+
+---
+
+## Regular Expressions
+
+- `.`: Match any single character  
+- `^`: Match the beginning of a line  
+- `$`: Match the end of a line  
+- `[]`: Match any character inside the brackets  
+- `[^]`: Match any character NOT inside the brackets  
+- `()`: Group characters together  
+- `|`: Match either/or (e.g. `cat|dog`)  
+- `*`: Match zero or more of the preceding character  
+- `+`: Match one or more of the preceding character  
+- `?`: Match zero or one of the preceding character  
+- `{}`: Match a range of occurrences (e.g. `a{1,3}` matches "a", "aa", or "aaa")  
+
+---
+
 ## Basic Text Search
 
 ### Search for a pattern in a file
@@ -137,11 +174,11 @@
 
 ### Practical Applications
 
-- Search for lines starting with "Error":
+- Search for lines starting with "Error":  
     `grep '^Error' log.txt`
-- Find lines ending with ".com":
+- Find lines ending with ".com":  
     `grep '\.com$' emails.txt`
-- Match lines containing digits:
+- Match lines containing digits:  
     `grep '[0-9]' file.txt`
-- Exclude empty lines:
+- Exclude empty lines:  
     `grep -v '^$' file.txt`
