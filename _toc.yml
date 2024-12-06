@@ -9,6 +9,7 @@ parts:
     chapters:
       - file: cheat-sheets/Markdown.md
       - file: cheat-sheets/nmap.md
+      - file: cheat-sheets/grep-commands.md
   - caption: "Languages"
     numbered: false
     chapters:
