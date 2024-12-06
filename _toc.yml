@@ -7,6 +7,7 @@ parts:
   - caption: "General"
     numbered: false
     chapters:
+      - file: cheat-sheets/linux.md
       - file: cheat-sheets/Markdown.md
       - file: cheat-sheets/nmap.md
       - file: cheat-sheets/grep-commands.md
