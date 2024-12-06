@@ -23,7 +23,11 @@
   </a>
 </div>
 
-![Deployment Status](https://github.com/breezy-codes/Cheat-Sheets/actions/workflows/deploy.yml/badge.svg)
+<div align="center">
+  <br>
+  <img src="https://github.com/breezy-codes/Cheat-Sheets/actions/workflows/deploy.yml/badge.svg" alt="Deployment Status">
+  <br><br>
+</div>
 
 Welcome to my collection of cheat sheets, I've gathered these during my subjects so far at university as a quick and easy tool. These cheat sheets are designed to help you check simple syntax and commands for various programming languages and tools. The markdown files are easy to read and can be printed out for quick reference. They can also be easily copied into your software of choice, I personally use them in notion with the table of contents feature to quickly find what I need.
 
