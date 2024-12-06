@@ -44,6 +44,8 @@ Each cheat sheet is detailed below with links to a downloadable PDF versions for
 - [Nmap Commands](nmap.md): A collection of Nmap commands for network scanning. You can also download the PDF version [here](nmap.pdf).
 - [Grep Commands](grep-commands.md): A collection of Grep commands for searching text. You can also download the PDF version [here](grep-commands.pdf).
 - [Linux Commands](linux-commands.md): A collection of Linux commands for system administration. You can also download the PDF version [here](linux-commands.pdf).
+- [Git Commands](git-commands.md): A collection of Git commands for version control. You can also download the PDF version [here](git-commands.pdf).
+- [Git Ignore](git-ignore.md): A collection of Git ignore patterns for excluding files. You can also download the PDF version [here](git-ignore.pdf).
 
 ## How to Use These Cheat Sheets
 
