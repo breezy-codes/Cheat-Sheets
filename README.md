@@ -42,6 +42,8 @@ Each cheat sheet is detailed below with links to a downloadable PDF versions for
 - [Python Language Cheatsheet](Python-Language.md): A collection of Python programming language syntax and functions. You can also download the PDF version [here](Python-Language.pdf).
 - [C++ Language Cheatsheet](CPP-Language.md): A collection of C++ programming language syntax and functions. You can also download the PDF version [here](CPP-Language.pdf).
 - [Nmap Commands](nmap.md): A collection of Nmap commands for network scanning. You can also download the PDF version [here](nmap.pdf).
+- [Grep Commands](grep-commands.md): A collection of Grep commands for searching text. You can also download the PDF version [here](grep-commands.pdf).
+- [Linux Commands](linux-commands.md): A collection of Linux commands for system administration. You can also download the PDF version [here](linux-commands.pdf).
 
 ## How to Use These Cheat Sheets
 
