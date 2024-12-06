@@ -1,0 +1,2054 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>C++ Programming Language &#8212; Cheat sheet Collection</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=21caafb3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cheat-sheets/CPP-Language';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Python-Language.html" />
+    <link rel="prev" title="Nmap Cheat Sheet" href="nmap.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Cheat sheet Collection - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Cheat sheet Collection - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Programming Cheat Sheets
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Markdown.html">Markdown</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="nmap.html">Nmap Cheat Sheet</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Languages</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">C++ Programming Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="R-Language.html">R Programming Language</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Pycharm-Shortcuts.html">Pycharm Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VS-Code-Shortcuts.html">VS Code Shortcuts</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cheat-sheets/CPP-Language.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>C++ Programming Language</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compile-command"><strong>Compile Command</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#execute-command"><strong>Execute Command</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-line-comments"><strong>Single-line Comments</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-line-comments"><strong>Multi-line Comments</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#program-structure"><strong>Program Structure</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-output"><strong>Basic Output</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new-line"><strong>New Line</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-c"><strong>Why C++?</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-compile-and-execute"><strong>C++ Compile and Execute</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-style-guide"><strong>C++ Style Guide</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-and-syntax">Variables and Syntax</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-input"><strong>User Input</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables"><strong>Variables</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators"><strong>Arithmetic Operators</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#double-type"><strong><code class="docutils literal notranslate"><span class="pre">double</span></code> Type</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chaining-the-output"><strong>Chaining the Output</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#int-type"><strong><code class="docutils literal notranslate"><span class="pre">int</span></code> Type</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#char-type"><strong><code class="docutils literal notranslate"><span class="pre">char</span></code> Type</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-type"><strong><code class="docutils literal notranslate"><span class="pre">string</span></code> Type</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bool-type"><strong><code class="docutils literal notranslate"><span class="pre">bool</span></code> Type</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-logic">Conditionals &amp; Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statement"><strong><code class="docutils literal notranslate"><span class="pre">if</span></code> Statement</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#else-clause"><strong><code class="docutils literal notranslate"><span class="pre">else</span></code> Clause</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relational-operators"><strong>Relational Operators</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#else-if-statement"><strong><code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> Statement</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loop"><strong><code class="docutils literal notranslate"><span class="pre">while</span></code> Loop</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop"><strong><code class="docutils literal notranslate"><span class="pre">for</span></code> Loop</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switch-statement"><strong><code class="docutils literal notranslate"><span class="pre">switch</span></code> Statement</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators"><strong>Logical Operators</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#break-and-continue"><strong>Break and Continue</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-overloading"><strong>Function Overloading</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-parameters"><strong>Function Parameters</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-arguments"><strong>Command Line Arguments</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-functions"><strong>Introduction to Functions</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#object-oriented-programming">Object Oriented Programming</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class-members"><strong>Class Members</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructor"><strong>Constructor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objects"><strong>Objects</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class"><strong>Class</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-control-operators"><strong>Access Control Operators</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructors"><strong>Constructors</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance"><strong>Inheritance</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-specifiers"><strong>Access Specifiers</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-and-objects"><strong>Classes and Objects</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polymorphism"><strong>Polymorphism</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-data-structures">Built in Data Structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors"><strong>vectors</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacks-and-queues"><strong>Stacks and Queues</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sets"><strong>Sets</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays"><strong>arrays</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hash-maps"><strong>Hash Maps</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-pointers">References and Pointers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pass-by-reference"><strong>Pass-By-Reference</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#const-reference"><strong><code class="docutils literal notranslate"><span class="pre">const</span></code> Reference</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pointers"><strong>Pointers</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><strong>References</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-address"><strong>Memory Address</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dereference"><strong>Dereference</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index"><strong>Index</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Vectors</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-back-pop-back"><strong><code class="docutils literal notranslate"><span class="pre">.push_back()</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">.pop_back()</span></code></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-type"><strong>Vector Type</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#size-function"><strong><code class="docutils literal notranslate"><span class="pre">.size()</span></code> Function</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-of-code"><strong>Scope of Code</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-declarations-in-header-file"><strong>Function Declarations in Header file</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-template"><strong>Function Template</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-arguments"><strong>Default Arguments</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-definitions"><strong>Functions Definitions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Function Overloading</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-functions"><strong>Inline Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#return-values"><strong>Return Values</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters"><strong>Parameters</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-functions"><strong>Built-in Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-a-function"><strong>Calling a Function</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#void-functions"><strong><code class="docutils literal notranslate"><span class="pre">void</span></code> Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-declaration-definition"><strong>Function Declaration &amp; Definition</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-arguments"><strong>Function Arguments</strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="c-programming-language">
+<h1>C++ Programming Language<a class="headerlink" href="#c-programming-language" title="Link to this heading">#</a></h1>
+<section id="hello-world">
+<h2>Hello World<a class="headerlink" href="#hello-world" title="Link to this heading">#</a></h2>
+<section id="compile-command">
+<h3><strong>Compile Command</strong><a class="headerlink" href="#compile-command" title="Link to this heading">#</a></h3>
+<p>Using GNU, the compilation command is <code class="docutils literal notranslate"><span class="pre">g++</span></code> followed by the file name. Here, the name of the source file is <strong>hello.cpp</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">++</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">cpp</span>
+</pre></div>
+</div>
+</section>
+<section id="execute-command">
+<h3><strong>Execute Command</strong><a class="headerlink" href="#execute-command" title="Link to this heading">#</a></h3>
+<p>The execution command is <code class="docutils literal notranslate"><span class="pre">./</span></code> followed by the file name. Here, the name of the executable file is <strong>a.out</strong>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">a</span><span class="p">.</span><span class="n">out</span>
+</pre></div>
+</div>
+</section>
+<section id="single-line-comments">
+<h3><strong>Single-line Comments</strong><a class="headerlink" href="#single-line-comments" title="Link to this heading">#</a></h3>
+<p>Single-line comments are created using two consecutive forward slashes. The compiler ignores any text after <code class="docutils literal notranslate"><span class="pre">//</span></code> on the same line.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// This line will denote a comment in C++</span>
+</pre></div>
+</div>
+</section>
+<section id="multi-line-comments">
+<h3><strong>Multi-line Comments</strong><a class="headerlink" href="#multi-line-comments" title="Link to this heading">#</a></h3>
+<p>Multi-line comments are created using <code class="docutils literal notranslate"><span class="pre">/*</span></code> to begin the comment, and <code class="docutils literal notranslate"><span class="pre">*/</span></code> to end the comment. The compiler ignores any text in between.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">This is all commented out.</span>
+<span class="cm">None of it is going to run!</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+</section>
+<section id="program-structure">
+<h3><strong>Program Structure</strong><a class="headerlink" href="#program-structure" title="Link to this heading">#</a></h3>
+<p>The program runs line by line, from top to bottom:</p>
+<ul class="simple">
+<li><p>The first line instructs the compiler to locate the file that contains a library called <code class="docutils literal notranslate"><span class="pre">iostream</span></code>. This library contains code that allows for input and output.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">main()</span></code> function houses all the instructions for the program.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;2</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w">  </span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;3</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="basic-output">
+<h3><strong>Basic Output</strong><a class="headerlink" href="#basic-output" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">std::cout</span></code> is the “character output stream” and it is used to write to the standard output. It is followed by the symbols <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code> and the value to be displayed.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="new-line">
+<h3><strong>New Line</strong><a class="headerlink" href="#new-line" title="Link to this heading">#</a></h3>
+<p>The escape sequence <code class="docutils literal notranslate"><span class="pre">\n</span></code> (backward slash and the letter n) generates a new line in a text string.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello again</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
+<section id="why-c">
+<h3><strong>Why C++?</strong><a class="headerlink" href="#why-c" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>C++ is developed by Bjarne Stroustrup at Bell Labs in 1979.</p></li>
+<li><p>C++ adds object-oriented programming and many other new features to C.</p></li>
+<li><p>C++ is fast, flexible, and well-supported across multiple platforms.</p></li>
+<li><p>Being one of the most popular languages today, C++ has a wide range of applications across many fields.</p></li>
+</ul>
+</section>
+<section id="c-compile-and-execute">
+<h3><strong>C++ Compile and Execute</strong><a class="headerlink" href="#c-compile-and-execute" title="Link to this heading">#</a></h3>
+<p>C++ a compiled language, which means a compiler needs to first translate your C++ <em>source code</em> into <em>machine code</em> before it can be run. There are two common ways for running C++ programs: using the command line or an IDE.</p>
+<ul class="simple">
+<li><p>On the command line, type <code class="docutils literal notranslate"><span class="pre">g++</span></code> and the filename to compile your program, then execute it with <code class="docutils literal notranslate"><span class="pre">./</span></code> and the name of the executable.</p></li>
+<li><p>On an IDE, explore external resources because the process is different depends on which IDE is being used.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">++</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">cpp</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">hello</span>
+<span class="p">.</span><span class="o">/</span><span class="n">hello</span>
+</pre></div>
+</div>
+</section>
+<section id="c-style-guide">
+<h3><strong>C++ Style Guide</strong><a class="headerlink" href="#c-style-guide" title="Link to this heading">#</a></h3>
+<p><em>Style</em> is what we call the conventions that govern our C++ code. These rules exist to keep the code base manageable and readable.</p>
+<p>Here are some basic tips from Google’s C++ Style Guide:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#include</span></code> statements are mostly written <strong>at the beginning</strong> of any C/C++ program.</p></li>
+<li><p>Names can never start with a digit or be the same as a predefined C++ keyword.</p></li>
+<li><p>Types, variable, operators, and literal values should be separated by <strong>one space horizontally</strong>.</p></li>
+<li><p>Classes, functions, and global variables should be separated by <strong>one space vertically</strong>.</p></li>
+<li><p>All indentations should be <strong>two spaces</strong> at a time.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="c1">// This program print out “Hello World!”</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">message</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="variables-and-syntax">
+<h2>Variables and Syntax<a class="headerlink" href="#variables-and-syntax" title="Link to this heading">#</a></h2>
+<section id="user-input">
+<h3><strong>User Input</strong><a class="headerlink" href="#user-input" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">std::cin</span></code>, which stands for “character input”, reads user input from the keyboard.</p>
+<p>Here, the user can enter a number, press enter, and that number will get stored in <code class="docutils literal notranslate"><span class="pre">tip</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">tip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Enter amount: &quot;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">tip</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="variables">
+<h3><strong>Variables</strong><a class="headerlink" href="#variables" title="Link to this heading">#</a></h3>
+<p>A variable refers to a storage location in the computer’s memory that one can set aside to save, retrieve, and manipulate data.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Declare a variable</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="p">;</span>
+<span class="c1">// Initialize a variable</span>
+<span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="arithmetic-operators">
+<h3><strong>Arithmetic Operators</strong><a class="headerlink" href="#arithmetic-operators" title="Link to this heading">#</a></h3>
+<p>C++ supports different types of arithmetic operators that can perform common mathematical operations:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> addition</p></li>
+<li><p>`` subtraction</p></li>
+<li><p>`` multiplication</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> division</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%</span></code> modulo (yields the remainder)</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// x is now 6</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// x is now 2</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// x is now 8</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// x is now 2</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// x is now 0</span>
+</pre></div>
+</div>
+</section>
+<section id="double-type">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">double</span></code> Type</strong><a class="headerlink" href="#double-type" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">double</span></code> is a type for storing floating point (decimal) numbers. Double variables typically require 8 bytes of memory space.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8.99</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="chaining-the-output">
+<h3><strong>Chaining the Output</strong><a class="headerlink" href="#chaining-the-output" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">std::cout</span></code> can output multiple values by chaining them using the output operator <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code>.</p>
+<p>Here, the output would be <code class="docutils literal notranslate"><span class="pre">I'm</span> <span class="pre">28.</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">28</span><span class="p">;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;I&#39;m &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="int-type">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">int</span></code> Type</strong><a class="headerlink" href="#int-type" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">int</span></code>
+is a type for storing integer (whole) numbers. An integer typically requires 4 bytes of memory space and ranges from -2³¹ to 2³¹-1.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1991</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">28</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="char-type">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">char</span></code> Type</strong><a class="headerlink" href="#char-type" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">char</span></code> is a type for storing individual characters. Characters are wrapped in single quotes <code class="docutils literal notranslate"><span class="pre">'</span></code>. Characters typically require 1 byte of memory space and range from -128 to 127.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">punctuation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;?&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="string-type">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">string</span></code> Type</strong><a class="headerlink" href="#string-type" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">std::string</span></code> is a type for storing text strings. Strings are wrapped in double quotes <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;good nite&quot;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;codey&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="bool-type">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">bool</span></code> Type</strong><a class="headerlink" href="#bool-type" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">bool</span></code> is a type for storing <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> boolean values. Booleans typically require 1 byte of memory space.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="n">organ_donor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">late_to_work</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="conditionals-logic">
+<h2>Conditionals &amp; Logic<a class="headerlink" href="#conditionals-logic" title="Link to this heading">#</a></h2>
+<section id="if-statement">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">if</span></code> Statement</strong><a class="headerlink" href="#if-statement" title="Link to this heading">#</a></h3>
+<p>An <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is used to test an expression for truth.</p>
+<ul class="simple">
+<li><p>If the condition evaluates to <code class="docutils literal notranslate"><span class="pre">true</span></code>, then the code within the block is executed; otherwise, it will be skipped.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="c1">// Code goes here</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="else-clause">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">else</span></code> Clause</strong><a class="headerlink" href="#else-clause" title="Link to this heading">#</a></h3>
+<p>An <code class="docutils literal notranslate"><span class="pre">else</span></code> clause can be added to an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
+<ul class="simple">
+<li><p>If the condition evaluates to <code class="docutils literal notranslate"><span class="pre">true</span></code>, code in the <code class="docutils literal notranslate"><span class="pre">if</span></code> part is executed.</p></li>
+<li><p>If the condition evaluates to <code class="docutils literal notranslate"><span class="pre">false</span></code>, code in the <code class="docutils literal notranslate"><span class="pre">else</span></code> part is executed.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1991</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="c1">// This runs if it is true</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="c1">// This runs if it is false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="relational-operators">
+<h3><strong>Relational Operators</strong><a class="headerlink" href="#relational-operators" title="Link to this heading">#</a></h3>
+<p>Relational operators are used to compare two values and return <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> depending on the comparison:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> equal to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">!=</span></code> not equal to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> greater than</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> less than</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> greater than or equal to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> less than or equal to</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span>
+<span class="c1">// ☝️ means greater than</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="else-if-statement">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> Statement</strong><a class="headerlink" href="#else-if-statement" title="Link to this heading">#</a></h3>
+<p>One or more <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> statements can be added in between the <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> to provide additional condition(s) to check.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">apple</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Some code here</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">apple</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Some code here</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Some code here</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="conditional-statements">
+<h3>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Link to this heading">#</a></h3>
+<p>Conditional statements are used to control the flow of code execution by testing for a condition for truth.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code> statements execute code only if the provided condition is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">else</span></code> statements execute code only if the provided condition in the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p>one or more <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> statements can be added in between the <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> to provide additional condition(s) to check.</p></li>
+</ul>
+<p>Some useful tricks with conditional statements:</p>
+<ul class="simple">
+<li><p>It is possible to condense an <code class="docutils literal notranslate"><span class="pre">ifelse</span></code> expression into a single statement using the following syntax:</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">condition_is_true</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">condition_is_false</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">temperature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">temperature</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">65</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Too cold!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">temperature</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">75</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Too hot!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="c1">// brackets may be omitted here</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Just right...&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Curly brackets <code class="docutils literal notranslate"><span class="pre">{</span></code> <code class="docutils literal notranslate"><span class="pre">}</span></code> may be omitted if there is only a single statement inside a conditional statement.</p></li>
+</ul>
+</section>
+<section id="while-loop">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">while</span></code> Loop</strong><a class="headerlink" href="#while-loop" title="Link to this heading">#</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">while</span></code> loop statement repeatedly executes the code block within as long as the condition is <code class="docutils literal notranslate"><span class="pre">true</span></code>. The moment the condition becomes <code class="docutils literal notranslate"><span class="pre">false</span></code>, the program will exit the loop.</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop might not ever run. If the condition is <code class="docutils literal notranslate"><span class="pre">false</span></code> initially, the code block will be skipped.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">password</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1234</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Try again: &quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">password</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="for-loop">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">for</span></code> Loop</strong><a class="headerlink" href="#for-loop" title="Link to this heading">#</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop executes a code block a specific number of times. It has three parts:</p>
+<ul class="simple">
+<li><p>The initialization of a counter</p></li>
+<li><p>The continue condition</p></li>
+<li><p>The increment/decrement of the counter</p></li>
+</ul>
+<p>This example prints 0 to 9 on the screen.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="switch-statement">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">switch</span></code> Statement</strong><a class="headerlink" href="#switch-statement" title="Link to this heading">#</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">switch</span></code> statement provides a means of checking an expression against various <code class="docutils literal notranslate"><span class="pre">case</span></code>s. If there is a match, the code within starts to execute. The <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword can be used to terminate a case.</p>
+<p><code class="docutils literal notranslate"><span class="pre">default</span></code> is executed when no case matches.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">9</span><span class="p">:</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Freshman</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">10</span><span class="p">:</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sophomore</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Junior</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">12</span><span class="p">:</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Senior</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Invalid</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="logical-operators">
+<h3><strong>Logical Operators</strong><a class="headerlink" href="#logical-operators" title="Link to this heading">#</a></h3>
+<p>Logical operators can be used to combine two different conditions.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> requires both to be true (<code class="docutils literal notranslate"><span class="pre">and</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">||</span></code> requires either to be true (<code class="docutils literal notranslate"><span class="pre">or</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">!</span></code> negates the result (<code class="docutils literal notranslate"><span class="pre">not</span></code>)</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">coffee</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">donut</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Code runs if both are true</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">coffee</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">donut</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Code runs if either is true</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">tired</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Code runs if tired is false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="break-and-continue">
+<h3><strong>Break and Continue</strong><a class="headerlink" href="#break-and-continue" title="Link to this heading">#</a></h3>
+<p>In C++, the <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword is used to exit a switch or loop.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">continue</span></code> keyword is used to skip an iteration of a loop.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints: 0123</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Prints: 012356789</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
+<section id="function-overloading">
+<h3><strong>Function Overloading</strong><a class="headerlink" href="#function-overloading" title="Link to this heading">#</a></h3>
+<p>With <em>function overloading</em>, C++ functions can have the same name but handle different input parameters.</p>
+<p>At least one of the following criteria must be true in order for functions to be properly overloaded:</p>
+<ul class="simple">
+<li><p>Each function has different types of parameters.</p></li>
+<li><p>Each function has a different number of parameters.</p></li>
+</ul>
+<p>The function return type is NOT used to differentiate overloaded functions.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// Calls add(int, int)</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="mf">5.3</span><span class="p">,</span><span class="w"> </span><span class="mf">1.4</span><span class="p">);</span><span class="w"> </span><span class="c1">// Calls add(double, double)</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">);</span><span class="w">  </span><span class="c1">// Calls add(int, int, int)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="function-parameters">
+<h3><strong>Function Parameters</strong><a class="headerlink" href="#function-parameters" title="Link to this heading">#</a></h3>
+<p>When calling a function with multiple parameters, the number and order of the arguments must match with the parameters.</p>
+<p>Default parameters initialize to a default value if an argument is not provided in the function call.</p>
+<p>Pass by reference lets the function modify the arguments variables. Use the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> operator to indicate that a parameter is passed by reference.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">totalPrice</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">items</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.99</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">items</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">price</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Pass by reference</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">addOne</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">totalPrice</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Output: 99.9</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="n">addOne</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="c1">// Output: 3</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="command-line-arguments">
+<h3><strong>Command Line Arguments</strong><a class="headerlink" href="#command-line-arguments" title="Link to this heading">#</a></h3>
+<p><em>Command line arguments</em> are optional arguments passed to the <code class="docutils literal notranslate"><span class="pre">main()</span></code> function of a C++ program.</p>
+<p>Passing command line arguments is as easy as appending the arguments after the executable name. For example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">greeting</span><span class="w"> </span><span class="n">Hello</span><span class="w"> </span><span class="n">World</span>
+</pre></div>
+</div>
+<p>In order to access command line arguments, the new form of <code class="docutils literal notranslate"><span class="pre">main()</span></code> takes two arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">argc</span></code>: the number of command line arguments.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">argv</span></code>: an array containing the values of command line arguments.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">argc</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">argc</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="introduction-to-functions">
+<h3><strong>Introduction to Functions</strong><a class="headerlink" href="#introduction-to-functions" title="Link to this heading">#</a></h3>
+<p>A <em>function</em> in C++ contains a set of instructions that are executed when it is called.</p>
+<p>A function declaration is composed of three parts:</p>
+<ol class="arabic simple">
+<li><p>Function return type</p></li>
+<li><p>Function name</p></li>
+<li><p>Function parameters</p></li>
+</ol>
+<p>A function can be called by specifying its name followed by a pair of parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">printTitle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Codecademy</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="w">  </span><span class="n">printTitle</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="object-oriented-programming">
+<h2>Object Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Link to this heading">#</a></h2>
+<section id="class-members">
+<h3><strong>Class Members</strong><a class="headerlink" href="#class-members" title="Link to this heading">#</a></h3>
+<p>A class is comprised of class members:</p>
+<ul class="simple">
+<li><p><em>Attributes</em>, also known as member data, consist of information about an instance of the class.</p></li>
+<li><p><em>Methods</em>, also known as member functions, are functions that can be used with an instance of the class.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">City</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="c1">// Attribute</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">population</span><span class="p">;</span>
+
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="c1">// Method</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">add_resident</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">population</span><span class="o">++</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="constructor">
+<h3><strong>Constructor</strong><a class="headerlink" href="#constructor" title="Link to this heading">#</a></h3>
+<p>For a C++ class, a <em>constructor</em> is a special kind of method that enables control regarding how the objects of a class should be created. Different class constructors can be specified for the same class, but each constructor signature must be unique.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;city.hpp&quot;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">City</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">population</span><span class="p">;</span>
+
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="n">City</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">new_name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">new_pop</span><span class="p">);</span>
+
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="objects">
+<h3><strong>Objects</strong><a class="headerlink" href="#objects" title="Link to this heading">#</a></h3>
+<p>In C++, an <em>object</em> is an instance of a class that encapsulates data and functionality pertaining to that data.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">City</span><span class="w"> </span><span class="n">nyc</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="class">
+<h3><strong>Class</strong><a class="headerlink" href="#class" title="Link to this heading">#</a></h3>
+<p>A C++ class is a user-defined data type that encapsulates information and behavior about an object. It serves as a blueprint for future inherited classes.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="w"> </span><span class="p">{};</span>
+</pre></div>
+</div>
+</section>
+<section id="access-control-operators">
+<h3><strong>Access Control Operators</strong><a class="headerlink" href="#access-control-operators" title="Link to this heading">#</a></h3>
+<p>C++ classes have access control operators that designate the scope of class members:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">public</span></code> members are accessible everywhere; <code class="docutils literal notranslate"><span class="pre">private</span></code> members can only be accessed from within the same instance of the class or from friends classes.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">City</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">population</span><span class="p">;</span><span class="w"> </span>
+
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">add_resident</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="n">population</span><span class="o">++</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">is_capital</span><span class="p">;</span>
+
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="constructors">
+<h3><strong>Constructors</strong><a class="headerlink" href="#constructors" title="Link to this heading">#</a></h3>
+<p>For a C++ class, a <em>constructor</em> is a special kind of method that enables control regarding how the objects of a class should be created. Different class constructors can be specified for the same class, but each constructor signature must be unique.</p>
+<p>A constructor can have multiple parameters as well as default parameter values.</p>
+<p>In order to initialize <code class="docutils literal notranslate"><span class="pre">const</span></code> or reference type attributes, use <em>member initializer lists</em> instead of normal constructors.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">House</span><span class="w"> </span><span class="p">{</span>
+<span class="k">private</span><span class="o">:</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">location</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">rooms</span><span class="p">;</span>
+
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="c1">// Constructor with default parameters</span>
+<span class="w">  </span><span class="n">House</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">loc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;New York&quot;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">;</span>
+<span class="w">    </span><span class="n">rooms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="c1">// Destructor</span>
+<span class="w">  </span><span class="o">~</span><span class="n">House</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Moved away from &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">location</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">House</span><span class="w"> </span><span class="n">default_house</span><span class="p">;</span><span class="w"> </span><span class="c1">// Calls House(&quot;New York&quot;, 5)</span>
+<span class="w">  </span><span class="n">House</span><span class="w"> </span><span class="n">texas_house</span><span class="p">(</span><span class="s">&quot;Texas&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Calls House(&quot;Texas&quot;, 5)</span>
+<span class="w">  </span><span class="n">House</span><span class="w"> </span><span class="n">big_florida_house</span><span class="p">(</span><span class="s">&quot;Florida&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Calls House(&quot;Florida&quot;, 10)</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="inheritance">
+<h3><strong>Inheritance</strong><a class="headerlink" href="#inheritance" title="Link to this heading">#</a></h3>
+<p>In C++, a class can inherit attributes and methods from another class. In an inheritance relationship, there are two categories of classes:</p>
+<ul class="simple">
+<li><p><em>Base class</em>: The class being inherited from.</p></li>
+<li><p><em>Derived class</em>: The class that inherits from the base class.</p></li>
+</ul>
+<p>It’s possible to have multi-level inheritance where classes are constructed in order from the “most base” class to the “most derived” class.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">base_id</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">Base</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">new_base</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">base_id</span><span class="p">(</span><span class="n">new_base</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">};</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Derived</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">derived_id</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">Derived</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">new_base</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">new_derived</span><span class="p">)</span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">Base</span><span class="p">(</span><span class="n">new_base</span><span class="p">),</span><span class="w"> </span><span class="n">derived_id</span><span class="p">(</span><span class="n">new_derived</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">base_id</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">derived_id</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Derived</span><span class="w"> </span><span class="n">temp</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">temp</span><span class="p">.</span><span class="n">show</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: 1 2</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="access-specifiers">
+<h3><strong>Access Specifiers</strong><a class="headerlink" href="#access-specifiers" title="Link to this heading">#</a></h3>
+<p><em>Access specifiers</em> are C++ keywords that determine the scope of class components:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code>: Class members are accessible from anywhere in the program.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span></code>: Class members are only accessible from inside the class.</p></li>
+</ul>
+<p><em>Encapsulation</em> is achieved by declaring class attributes as <code class="docutils literal notranslate"><span class="pre">private</span></code>:</p>
+<ul class="simple">
+<li><p>Accessor functions: return the value of <code class="docutils literal notranslate"><span class="pre">private</span></code> member variables.</p></li>
+<li><p>Mutator functions: change the value of <code class="docutils literal notranslate"><span class="pre">private</span></code> member variables.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Computer</span><span class="w"> </span><span class="p">{</span>
+<span class="k">private</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">password</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">getPassword</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">password</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">setPassword</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">new_password</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_password</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">Computer</span><span class="w"> </span><span class="n">dell</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">dell</span><span class="p">.</span><span class="n">setPassword</span><span class="p">(</span><span class="mi">12345</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dell</span><span class="p">.</span><span class="n">getPassword</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="classes-and-objects">
+<h3><strong>Classes and Objects</strong><a class="headerlink" href="#classes-and-objects" title="Link to this heading">#</a></h3>
+<p>A C++ <em>class</em> is a user-defined data type that encapsulates information and behavior about an object.</p>
+<p>A class can have two types of <em>class members</em>:</p>
+<ul class="simple">
+<li><p><em>Attributes</em>, also known as member data, consist of information about an instance of the class.</p></li>
+<li><p><em>Methods</em>, also known as member functions, are functions that can be used with an instance of the class.</p></li>
+</ul>
+<p>An <em>object</em> is an instance of a class and can be created by specifying the class name.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Dog</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;woof</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Dog</span><span class="w"> </span><span class="n">buddy</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">buddy</span><span class="p">.</span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">buddy</span><span class="p">.</span><span class="n">sound</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: woof</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="polymorphism">
+<h3><strong>Polymorphism</strong><a class="headerlink" href="#polymorphism" title="Link to this heading">#</a></h3>
+<p>In C++, <em>polymorphism</em> occurs when a derived class overrides a method inherited from its base class with the same function signature.</p>
+<p>Polymorphism gives a method many “forms”. Which form is executed depends on the type of the caller object.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Employee</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">salary</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Normal salary.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Manager</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Employee</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">salary</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Normal salary and bonus.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Employee</span><span class="w"> </span><span class="n">newbie</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Manager</span><span class="w"> </span><span class="n">boss</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">newbie</span><span class="p">.</span><span class="n">salary</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: Normal salary.</span>
+<span class="w">  </span><span class="n">boss</span><span class="p">.</span><span class="n">salary</span><span class="p">();</span><span class="w"> </span><span class="c1">// Outputs: Normal salary and bonus.</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="built-in-data-structures">
+<h2>Built in Data Structures<a class="headerlink" href="#built-in-data-structures" title="Link to this heading">#</a></h2>
+<section id="vectors">
+<h3><strong>vectors</strong><a class="headerlink" href="#vectors" title="Link to this heading">#</a></h3>
+<p>In C++, a vector is a data structure that stores a sequence of elements that can be accessed by index.</p>
+<p>Unlike arrays, vectors can dynamically shrink and grow in size.</p>
+<p>The standard <code class="docutils literal notranslate"><span class="pre">&lt;vector&gt;</span></code> library provide methods for vector operations:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.push_back()</span></code>: add element to the end of the vector.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.pop_back()</span></code>: remove element from the end of the vector.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.size()</span></code>: return the size of the vector.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.empty()</span></code>: return whether the vector is empty.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="w"> </span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">primes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">};</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">primes</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="c1">// Outputs: 5</span>
+
+<span class="w">  </span><span class="n">primes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">13</span><span class="p">);</span>
+<span class="w">  </span><span class="n">primes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">17</span><span class="p">);</span>
+<span class="w">  </span><span class="n">primes</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">primes</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">primes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// Outputs: 2 3 5 7 11 13</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="stacks-and-queues">
+<h3><strong>Stacks and Queues</strong><a class="headerlink" href="#stacks-and-queues" title="Link to this heading">#</a></h3>
+<p>In C++, <em>stacks</em> and <em>queues</em> are data structures for storing data in specific orders.</p>
+<p>Stacks are designed to operate in a <strong>Last-In-First-Out</strong> context (LIFO), where elements are inserted and extracted only from one end of the container.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.push()</span></code> add an element at the top of the stack.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.pop()</span></code> remove the element at the top of the stack.</p></li>
+</ul>
+<p>Queues are designed to operate in a <strong>First-In-First-Out</strong> context (FIFO), where elements are inserted into one end of the container and extracted from the other.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.push()</span></code> add an element at the end of the queue.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.pop()</span></code> remove the element at the front of the queue.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stack&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;queue&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tower</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">tower</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">  </span><span class="n">tower</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">tower</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">tower</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tower</span><span class="p">.</span><span class="n">top</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">tower</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// Outputs: 1 2 3</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">order</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">order</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">  </span><span class="n">order</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+<span class="w">  </span><span class="n">order</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">order</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">order</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// Outputs: 10 9 8</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="sets">
+<h3><strong>Sets</strong><a class="headerlink" href="#sets" title="Link to this heading">#</a></h3>
+<p>In C++, a <em>set</em> is a data structure that contains a collection of unique elements. Elements of a set are index by their own values, or <em>keys</em>.</p>
+<p>A set cannot contain duplicate elements. Once an element has been added to a set, that element cannot be modified.</p>
+<p>The following methods apply to both <code class="docutils literal notranslate"><span class="pre">unordered_set</span></code> and <code class="docutils literal notranslate"><span class="pre">set</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.insert()</span></code>: add an element to the set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.erase()</span></code>: removes an element from the set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.count()</span></code>: check whether an element exists in the set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.size()</span></code>: return the size of the set.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_set&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;set&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">primes</span><span class="p">({</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">});</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">primes</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span>
+<span class="w">  </span><span class="n">primes</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">13</span><span class="p">);</span>
+<span class="w">  </span><span class="n">primes</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span><span class="w">  </span><span class="c1">// Duplicates are not inserted</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">primes</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">primes</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">13</span><span class="p">);</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="c1">// Outputs: primes does not contain 2.</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">primes</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;primes contains 2.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;primes does not contain 2.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="c1">// Outputs: Size of primes: 4</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Size of primes: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">primes</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="arrays">
+<h3><strong>arrays</strong><a class="headerlink" href="#arrays" title="Link to this heading">#</a></h3>
+<p>Arrays in C++ are used to store a collection of values of the same type. The size of an array is specified when it is declared and cannot change afterward.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">[]</span></code> and an integer index to access an array element. Keep in mind: array indices start with <code class="docutils literal notranslate"><span class="pre">0</span></code>, not <code class="docutils literal notranslate"><span class="pre">1</span></code>!.</p>
+<p>A multidimensional array is an “array of arrays” and is declared by adding extra sets of indices to the array name.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">vowels</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;i&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;u&#39;</span><span class="p">};</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vowels</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="c1">// Outputs: i</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">game</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="sc">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;o&#39;</span><span class="p">}</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span><span class="sc">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;x&#39;</span><span class="p">}</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span><span class="sc">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;x&#39;</span><span class="p">}</span><span class="w">  </span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span>
+<span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">game</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="c1">// Outputs: o</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="hash-maps">
+<h3><strong>Hash Maps</strong><a class="headerlink" href="#hash-maps" title="Link to this heading">#</a></h3>
+<p>In C++, a <em>hash map</em> is a data structure that contains a collection of unique elements in the form of <em>key-value</em> pairs. Elements of a hash map are identified by key values, while the <em>mapped values</em> are the content associated with the keys.</p>
+<p>Each element of a <code class="docutils literal notranslate"><span class="pre">map</span></code> or <code class="docutils literal notranslate"><span class="pre">unordered_map</span></code> is an object of type <code class="docutils literal notranslate"><span class="pre">pair</span></code>. A <code class="docutils literal notranslate"><span class="pre">pair</span></code> object has two member variables:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.first</span></code> is the value of the key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.second</span></code> is the mapped value</p></li>
+</ul>
+<p>The following methods apply to both <code class="docutils literal notranslate"><span class="pre">unordered_map</span></code> and <code class="docutils literal notranslate"><span class="pre">map</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.insert()</span></code>: add an element to the map.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.erase()</span></code>: removes an element from the map.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.count()</span></code>: check whether an element exists in the map.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.size()</span></code>: return the size of the map.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[]</span></code> operater:</p>
+<ul>
+<li><p>If the specified key matches an element in the map, then access the mapped value associated with that key.</p></li>
+<li><p>If the specified key doesn’t match any element in the map, add a new element to the map with that key.</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_map&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;map&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">country_codes</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">country_codes</span><span class="p">.</span><span class="n">insert</span><span class="p">({</span><span class="s">&quot;Thailand&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">65</span><span class="p">});</span>
+<span class="w">  </span><span class="n">country_codes</span><span class="p">.</span><span class="n">insert</span><span class="p">({</span><span class="s">&quot;Peru&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">51</span><span class="p">});</span>
+<span class="w">  </span><span class="n">country_codes</span><span class="p">[</span><span class="s">&quot;Japan&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">81</span><span class="p">;</span><span class="w"> </span><span class="c1">// Add a new element</span>
+<span class="w">  </span><span class="n">country_codes</span><span class="p">[</span><span class="s">&quot;Thailand&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">66</span><span class="p">;</span><span class="w"> </span><span class="c1">// Access an element</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">country_codes</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="s">&quot;Peru&quot;</span><span class="p">);</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="c1">// Outputs: There isn&#39;t a code for Belgium</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">country_codes</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="s">&quot;Belgium&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;There is a code for Belgium</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;There isn&#39;t a code for Belgium</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Outputs: 81</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">country_codes</span><span class="p">[</span><span class="s">&quot;Japan&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="c1">// Outputs: 2</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">country_codes</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="c1">// Outputs: Japan 81</span>
+<span class="w">  </span><span class="c1">//          Thailand 66</span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="o">:</span><span class="w"> </span><span class="n">country_codes</span><span class="p">){</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="n">second</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="references-and-pointers">
+<h2>References and Pointers<a class="headerlink" href="#references-and-pointers" title="Link to this heading">#</a></h2>
+<section id="pass-by-reference">
+<h3><strong>Pass-By-Reference</strong><a class="headerlink" href="#pass-by-reference" title="Link to this heading">#</a></h3>
+<p>In C++, <em>pass-by-reference</em> refers to passing parameters to a function by using references.</p>
+<p>It allows the ability to:</p>
+<ul class="simple">
+<li><p>Modify the value of the function arguments.</p></li>
+<li><p>Avoid making copies of a variable/object for performance reasons.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">swap_num</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">  </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">  </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">swap_num</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;A is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;B is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="const-reference">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">const</span></code> Reference</strong><a class="headerlink" href="#const-reference" title="Link to this heading">#</a></h3>
+<p>In C++, pass-by-reference with <code class="docutils literal notranslate"><span class="pre">const</span></code> can be used for a function where the parameter(s) won’t change inside the function.</p>
+<p>This saves the computational cost of making a copy of the argument.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">triple</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="pointers">
+<h3><strong>Pointers</strong><a class="headerlink" href="#pointers" title="Link to this heading">#</a></h3>
+<p>In C++, a <em>pointer</em> variable stores the memory address of something else. It is created using the <code class="docutils literal notranslate"><span class="pre">*</span></code> sign.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">pointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">gum</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="references">
+<h3><strong>References</strong><a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<p>In C++, a <em>reference</em> variable is an alias for another object. It is created using the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> sign. Two things to note:</p>
+<ol class="arabic simple">
+<li><p>Anything done to the reference also happens to the original.</p></li>
+<li><p>Aliases cannot be changed to alias something else.</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">sonny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">songqiao</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="memory-address">
+<h3><strong>Memory Address</strong><a class="headerlink" href="#memory-address" title="Link to this heading">#</a></h3>
+<p>In C++, the <em>memory address</em> is the location in the memory of an object. It can be accessed with the “address of” operator, <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>.</p>
+<p>Given a variable <code class="docutils literal notranslate"><span class="pre">porcupine_count</span></code>, the memory address can be retrieved by printing out <code class="docutils literal notranslate"><span class="pre">&amp;porcupine_count</span></code>. It will return something like: <code class="docutils literal notranslate"><span class="pre">0x7ffd7caa5b54</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">porcupine_count</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="dereference">
+<h3><strong>Dereference</strong><a class="headerlink" href="#dereference" title="Link to this heading">#</a></h3>
+<p>In C++, a <em>dereference reference operator</em>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, can be used to obtain the value pointed to by a pointer variable.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">gum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="c1">// * on left side is a pointer</span>
+<span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">pointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">gum</span><span class="p">;</span>
+
+<span class="c1">// * on right side is a dereference of that pointer</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">dereference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">pointer</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id1">
+<h2>Vectors<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="index">
+<h3><strong>Index</strong><a class="headerlink" href="#index" title="Link to this heading">#</a></h3>
+<p>An index refers to an element’s position within an ordered list, like a vector or an array. The first element has an index of 0.</p>
+<p>A specific element in a vector or an array can be accessed using its index, like <code class="docutils literal notranslate"><span class="pre">name[index]</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">3.99</span><span class="p">,</span><span class="w"> </span><span class="mf">12.99</span><span class="p">,</span><span class="w"> </span><span class="mf">2.49</span><span class="p">};</span>
+
+<span class="c1">// What&#39;s the first element?</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">order</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+<span class="c1">// What&#39;s the last element?</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">order</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h3><strong>Vectors</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>In C++, a vector is a dynamic list of items, that can shrink and grow in size. It is created using <code class="docutils literal notranslate"><span class="pre">std::vector&lt;type&gt;</span> <span class="pre">name;</span></code> and it can only store values of the same type.</p>
+<p>To use vectors, it is necessary to <code class="docutils literal notranslate"><span class="pre">#include</span></code> the <code class="docutils literal notranslate"><span class="pre">vector</span></code> library.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">grades</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">grades</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">90</span><span class="p">;</span>
+<span class="w">  </span><span class="n">grades</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">86</span><span class="p">;</span>
+<span class="w">  </span><span class="n">grades</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">98</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="push-back-pop-back">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">.push_back()</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">.pop_back()</span></code></strong><a class="headerlink" href="#push-back-pop-back" title="Link to this heading">#</a></h3>
+<p>The following functions can be used to add and remove an element in a vector:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.push_back()</span></code> to add an element to the “end” of a vector</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.pop_back()</span></code> to remove an element from the “end” of a vector</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">wishlist</span><span class="p">;</span>
+
+<span class="n">wishlist</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Oculus&quot;</span><span class="p">);</span>
+<span class="n">wishlist</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Telecaster&quot;</span><span class="p">);</span>
+
+<span class="n">wishlist</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">wishlist</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span>
+<span class="c1">// Prints: 1</span>
+</pre></div>
+</div>
+</section>
+<section id="vector-type">
+<h3><strong>Vector Type</strong><a class="headerlink" href="#vector-type" title="Link to this heading">#</a></h3>
+<p>During the creation of a C++ vector, the data type of its elements must be specified. Once the vector is created, the type cannot be changed.</p>
+</section>
+<section id="size-function">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">.size()</span></code> Function</strong><a class="headerlink" href="#size-function" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">.size()</span></code> function can be used to return the number of elements in a vector, like <code class="docutils literal notranslate"><span class="pre">name.size()</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+
+<span class="n">employees</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;michael&quot;</span><span class="p">);</span>
+<span class="n">employees</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;jim&quot;</span><span class="p">);</span>
+<span class="n">employees</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;pam&quot;</span><span class="p">);</span>
+<span class="n">employees</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;dwight&quot;</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="c1">// Prints: 4</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id3">
+<h2>Functions<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="scope-of-code">
+<h3><strong>Scope of Code</strong><a class="headerlink" href="#scope-of-code" title="Link to this heading">#</a></h3>
+<p>The <em>scope</em> is the region of code that can access or view a given element:</p>
+<ul class="simple">
+<li><p>Variables defined in <em>global scope</em> are accessible throughout the program.</p></li>
+<li><p>Variables defined in a function have <em>local scope</em> and are only accessible inside the function.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">();</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">       </span><span class="c1">// global variable</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">      </span><span class="c1">// local variable</span>
+<span class="w">  </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="function-declarations-in-header-file">
+<h3><strong>Function Declarations in Header file</strong><a class="headerlink" href="#function-declarations-in-header-file" title="Link to this heading">#</a></h3>
+<p>C++ functions typically have two parts: declaration and definition.</p>
+<p>Function declarations are generally stored in a <em>header file</em> (<strong>.hpp</strong> or <strong>.h</strong>) and function definitions (body of the function that defines how it is implemented) are written in the <strong>.cpp</strong> file.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// ~~~~~~ main.cpp ~~~~~~</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;functions.hpp&quot;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">say_hi</span><span class="p">(</span><span class="s">&quot;Sabaa&quot;</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="c1">// ~~~~~~ functions.hpp ~~~~~~</span>
+
+<span class="c1">// function declaration</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">say_hi</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+
+<span class="c1">// ~~~~~~ functions.cpp ~~~~~~</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;functions.hpp&quot;</span>
+
+<span class="c1">// function defintion</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">say_hi</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hey there, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="function-template">
+<h3><strong>Function Template</strong><a class="headerlink" href="#function-template" title="Link to this heading">#</a></h3>
+<p>A <em>function template</em> is a C++ tool that allows programmers to add data types as parameters, enabling a function to behave the same with different types of parameters. The use of <em>function templates</em> and <em>template parameters</em> is a great C++ resource to produce cleaner code, as it prevents function duplication.</p>
+</section>
+<section id="default-arguments">
+<h3><strong>Default Arguments</strong><a class="headerlink" href="#default-arguments" title="Link to this heading">#</a></h3>
+<p>In C++, <em>default arguments</em> can be added to function declarations so that it is possible to call the function without including those arguments. If those arguments are included the default value is overwritten. Function parameters are read from left to right, so default parameters should be placed from right to left.</p>
+</section>
+<section id="functions-definitions">
+<h3><strong>Functions Definitions</strong><a class="headerlink" href="#functions-definitions" title="Link to this heading">#</a></h3>
+<p>In C++, it is common to store function definitions in a separate <strong>.cpp</strong> file from the <code class="docutils literal notranslate"><span class="pre">main()</span></code> function. This separation results in a more efficient implementation.</p>
+<p><strong>Note:</strong> If the file containing the <code class="docutils literal notranslate"><span class="pre">main()</span></code> function needs to be recompiled, it is not necessary to recompile the files containing the function definitions.</p>
+</section>
+<section id="id4">
+<h3><strong>Function Overloading</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>In C++, <em>function overloading</em> enables functions to handle different types of input and return different types. It allows multiple definitions for the same function name, but all of these definitions must differ in their arguments.</p>
+</section>
+<section id="inline-functions">
+<h3><strong>Inline Functions</strong><a class="headerlink" href="#inline-functions" title="Link to this heading">#</a></h3>
+<p>An <em>inline</em> function is a function definition, usually in a header file, qualified by the inline keyword, which advises the compiler to insert the function’s body where the function call is. If a modification is made in an inline function, it would require all files containing a call to that function to be recompiled.</p>
+</section>
+<section id="return-values">
+<h3><strong>Return Values</strong><a class="headerlink" href="#return-values" title="Link to this heading">#</a></h3>
+<p>A function that returns a value must have a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement. The data type of the return value also must match the method’s declared return type.</p>
+<p>On the other hand, a <code class="docutils literal notranslate"><span class="pre">void</span></code> function (one that does not return anything) does not require a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="parameters">
+<h3><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Link to this heading">#</a></h3>
+<p>Function parameters are placeholders for values passed to the function. They act as variables inside a function.</p>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">x</span></code> is a parameter that holds a value of 10 when it’s called.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3><strong>Functions</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>A <em>function</em> is a set of statements that are executed together when the function is called. Every function has a name, which is used to call the respective function.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="c1">// Declaring a function</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">();</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">print</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Defining a function</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="built-in-functions">
+<h3><strong>Built-in Functions</strong><a class="headerlink" href="#built-in-functions" title="Link to this heading">#</a></h3>
+<p>C++ has many built-in functions. In order to use them, we have to import the required library using <code class="docutils literal notranslate"><span class="pre">#include</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="c1">// sqrt() is from cmath</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">  </span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="calling-a-function">
+<h3><strong>Calling a Function</strong><a class="headerlink" href="#calling-a-function" title="Link to this heading">#</a></h3>
+<p>In C++, when we define a function, it is not executed automatically. To execute it, we need to “call” the function by specifying its name followed by a pair of parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// calling a functionprint();</span>
+</pre></div>
+</div>
+</section>
+<section id="void-functions">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">void</span></code> Functions</strong><a class="headerlink" href="#void-functions" title="Link to this heading">#</a></h3>
+<p>In C++, if we declare the type of a function as <code class="docutils literal notranslate"><span class="pre">void</span></code>, it does not return a value. These functions are useful for a set of statements that do not require returning a value.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="n">print</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="function-declaration-definition">
+<h3><strong>Function Declaration &amp; Definition</strong><a class="headerlink" href="#function-declaration-definition" title="Link to this heading">#</a></h3>
+<p>A C++ function has two parts:</p>
+<ul class="simple">
+<li><p>Function declaration</p></li>
+<li><p>Function definition</p></li>
+</ul>
+<p>The declaration includes the function’s name, return type, and any parameters.</p>
+<p>The definition is the actual body of the function which executes when a function is called. The body of a function is typically enclosed in curly braces.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="c1">// function declaration</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">blah</span><span class="p">();</span><span class="w"> </span>
+
+<span class="c1">// main function</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">blah</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// function definition</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">blah</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Blah blah&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="function-arguments">
+<h3><strong>Function Arguments</strong><a class="headerlink" href="#function-arguments" title="Link to this heading">#</a></h3>
+<p>In C++, the values passed to a function are known as arguments. They represent the actual input values.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span>
+<span class="w">  </span><span class="c1">// the argument 10 is received as input value</span>
+<span class="p">}</span>
+
+<span class="c1">// parameter a is defined for the function print</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./cheat-sheets"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="nmap.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Nmap Cheat Sheet</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Python-Language.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compile-command"><strong>Compile Command</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#execute-command"><strong>Execute Command</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-line-comments"><strong>Single-line Comments</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-line-comments"><strong>Multi-line Comments</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#program-structure"><strong>Program Structure</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-output"><strong>Basic Output</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new-line"><strong>New Line</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-c"><strong>Why C++?</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-compile-and-execute"><strong>C++ Compile and Execute</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-style-guide"><strong>C++ Style Guide</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-and-syntax">Variables and Syntax</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-input"><strong>User Input</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables"><strong>Variables</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators"><strong>Arithmetic Operators</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#double-type"><strong><code class="docutils literal notranslate"><span class="pre">double</span></code> Type</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chaining-the-output"><strong>Chaining the Output</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#int-type"><strong><code class="docutils literal notranslate"><span class="pre">int</span></code> Type</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#char-type"><strong><code class="docutils literal notranslate"><span class="pre">char</span></code> Type</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-type"><strong><code class="docutils literal notranslate"><span class="pre">string</span></code> Type</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bool-type"><strong><code class="docutils literal notranslate"><span class="pre">bool</span></code> Type</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-logic">Conditionals &amp; Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statement"><strong><code class="docutils literal notranslate"><span class="pre">if</span></code> Statement</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#else-clause"><strong><code class="docutils literal notranslate"><span class="pre">else</span></code> Clause</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relational-operators"><strong>Relational Operators</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#else-if-statement"><strong><code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> Statement</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">Conditional Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loop"><strong><code class="docutils literal notranslate"><span class="pre">while</span></code> Loop</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop"><strong><code class="docutils literal notranslate"><span class="pre">for</span></code> Loop</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switch-statement"><strong><code class="docutils literal notranslate"><span class="pre">switch</span></code> Statement</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators"><strong>Logical Operators</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#break-and-continue"><strong>Break and Continue</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-overloading"><strong>Function Overloading</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-parameters"><strong>Function Parameters</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-arguments"><strong>Command Line Arguments</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-functions"><strong>Introduction to Functions</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#object-oriented-programming">Object Oriented Programming</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class-members"><strong>Class Members</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructor"><strong>Constructor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objects"><strong>Objects</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class"><strong>Class</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-control-operators"><strong>Access Control Operators</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructors"><strong>Constructors</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance"><strong>Inheritance</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-specifiers"><strong>Access Specifiers</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-and-objects"><strong>Classes and Objects</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polymorphism"><strong>Polymorphism</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-data-structures">Built in Data Structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors"><strong>vectors</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacks-and-queues"><strong>Stacks and Queues</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sets"><strong>Sets</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays"><strong>arrays</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hash-maps"><strong>Hash Maps</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-and-pointers">References and Pointers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pass-by-reference"><strong>Pass-By-Reference</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#const-reference"><strong><code class="docutils literal notranslate"><span class="pre">const</span></code> Reference</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pointers"><strong>Pointers</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><strong>References</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-address"><strong>Memory Address</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dereference"><strong>Dereference</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index"><strong>Index</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Vectors</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-back-pop-back"><strong><code class="docutils literal notranslate"><span class="pre">.push_back()</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">.pop_back()</span></code></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-type"><strong>Vector Type</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#size-function"><strong><code class="docutils literal notranslate"><span class="pre">.size()</span></code> Function</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-of-code"><strong>Scope of Code</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-declarations-in-header-file"><strong>Function Declarations in Header file</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-template"><strong>Function Template</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-arguments"><strong>Default Arguments</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-definitions"><strong>Functions Definitions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Function Overloading</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-functions"><strong>Inline Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#return-values"><strong>Return Values</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters"><strong>Parameters</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-functions"><strong>Built-in Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-a-function"><strong>Calling a Function</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#void-functions"><strong><code class="docutils literal notranslate"><span class="pre">void</span></code> Functions</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-declaration-definition"><strong>Function Declaration &amp; Definition</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-arguments"><strong>Function Arguments</strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brianna Laird
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

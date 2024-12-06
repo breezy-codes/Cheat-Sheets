@@ -1,0 +1,742 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Nmap Cheat Sheet &#8212; Cheat sheet Collection</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=21caafb3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cheat-sheets/nmap';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="C++ Programming Language" href="CPP-Language.html" />
+    <link rel="prev" title="Markdown" href="Markdown.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Cheat sheet Collection - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Cheat sheet Collection - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Programming Cheat Sheets
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Markdown.html">Markdown</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Nmap Cheat Sheet</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Languages</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="CPP-Language.html">C++ Programming Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="R-Language.html">R Programming Language</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Pycharm-Shortcuts.html">Pycharm Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VS-Code-Shortcuts.html">VS Code Shortcuts</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cheat-sheets/nmap.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Nmap Cheat Sheet</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#host-discovery-and-identification">Host discovery and identification</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-scanning">Basic Scanning</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timing-and-performance">Timing and performance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-detection">Version detection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-and-port-scanning">Network and port scanning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nmap-scripting-engine-nse">Nmap Scripting Engine (NSE)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-mail-servers">Scanning mail servers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-databases">Scanning databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-web-servers">Scanning web servers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ics-scada-systems">ICS/SCADA systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-reports">Generating reports</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="nmap-cheat-sheet">
+<h1>Nmap Cheat Sheet<a class="headerlink" href="#nmap-cheat-sheet" title="Link to this heading">#</a></h1>
+<p>The definitive Nmap guide for beginners and advanced users</p>
+<section id="host-discovery-and-identification">
+<h2>Host discovery and identification<a class="headerlink" href="#host-discovery-and-identification" title="Link to this heading">#</a></h2>
+<section id="basic-scanning">
+<h3>Basic Scanning<a class="headerlink" href="#basic-scanning" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Launch a Ping scan:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Ping scan (subnet):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">&lt;target&gt;</span> <span class="pre">Ex:</span> <span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">192.168.1.0/24</span></code></p></li>
+<li><p>Scan a list of targets:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-iL</span> <span class="pre">&lt;targets.txt&gt;</span></code></p></li>
+<li><p>Ping scan with traceroute:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">--traceroute</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>TCP SYN Ping:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-PS</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>UDP Ping:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-PU</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Scan IPv4 target:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-4</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Specify NSE script:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">--script</span> <span class="pre">&lt;nse-script&gt;</span></code></p></li>
+<li><p>Manually assign DNS servers:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--dns-servers</span> <span class="pre">&lt;dns&gt;</span></code></p></li>
+<li><p>IPv6 Ping:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-6</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Specify outgoing interface:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-e</span> <span class="pre">&lt;interface&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>TCP ACK Ping:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-PA</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>No DNS resolution:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-n</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Scan list of hosts:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-iL</span> <span class="pre">&lt;hosts.txt&gt;</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="timing-and-performance">
+<h2>Timing and performance<a class="headerlink" href="#timing-and-performance" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Rate limiting:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--scan-delay</span> <span class="pre">&lt;time&gt;</span></code></p></li>
+<li><p>Adjust delay between probes:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--min-rate</span> <span class="pre">&lt;time&gt;</span> <span class="pre">--max-scan-delay</span> <span class="pre">&lt;time&gt;</span></code></p></li>
+<li><p>Paranoid timing template:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-T0</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Sneaky - Evasion (also T0):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-T1</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Polite - Slower than normal scan:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-T2</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Normal - Default speed:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-T3</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Aggressive - Recommended mode:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-T4</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Insane - Very fast networks:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-T5</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Host timeouts - give up on hosts:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--host-timeout</span> <span class="pre">&lt;time&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="version-detection">
+<h2>Version detection<a class="headerlink" href="#version-detection" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Service detection:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sV</span> <span class="pre">&lt;target&gt;</span> <span class="pre">Ex:</span> <span class="pre">nmap</span> <span class="pre">-sV</span> <span class="pre">scanme.nmap.org</span></code></p></li>
+<li><p>OS detection:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-O</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Attempt OS guessing:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-O</span> <span class="pre">--osscan-guess</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Increasing version detection:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sV</span> <span class="pre">--version-intensity</span> <span class="pre">&lt;0-9&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Troubleshoot version scans:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sV</span> <span class="pre">--version-trace</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Aggressive detection mode:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-A</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Verbose mode:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-v</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="network-and-port-scanning">
+<h2>Network and port scanning<a class="headerlink" href="#network-and-port-scanning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>TCP SYN ping scan:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">-PS</span> <span class="pre">&lt;target&gt;</span> <span class="pre">or</span> <span class="pre">nmap</span> <span class="pre">-sS</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Scanning multiple ports:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p</span> <span class="pre">5600,1000-2000</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>TCP ACK ping scan:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">-PA</span> <span class="pre">&lt;target&gt;</span> <span class="pre">or</span> <span class="pre">nmap</span> <span class="pre">-sA</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>UDP ping scan:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">-PU</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>ICMP ping scan:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">-PE</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>SCTP INIT ping scan:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">-PY</span> <span class="pre">&lt;target&gt;</span> <span class="pre">or</span> <span class="pre">nmap</span> <span class="pre">-sY</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>IP protocol ping scan (tracing):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sn</span> <span class="pre">--packet-trace</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Scan random number of hosts:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-iR</span> <span class="pre">&lt;number&gt;</span></code></p></li>
+<li><p>Broadcast pings:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script=broadcast-ping</span> <span class="pre">--packet-trace</span></code></p></li>
+<li><p>Xmas scan (sets the FIN, PSH, URG flags):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sX</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>UDP scan (with verbosity):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sU</span> <span class="pre">-v</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Scan a firewall (specify TCP header to imply fragmentation):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-f</span> <span class="pre">-f</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Cloak a scan with decoys:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-D</span> <span class="pre">&lt;decoy1,decoy2&gt;</span> <span class="pre">&lt;target&gt;</span> <span class="pre">Ex:</span> <span class="pre">nmap</span> <span class="pre">-D</span> <span class="pre">Rnd:10</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Spoof source IP address:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-S</span> <span class="pre">&lt;IP_Address&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Spoof MAC address:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--spoof-mac</span> <span class="pre">[MAC_ADDRESS]</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Scan using a random MAC address:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-vv</span> <span class="pre">--iflist</span> <span class="pre">--spoof-mac</span> <span class="pre">0</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="nmap-scripting-engine-nse">
+<h2>Nmap Scripting Engine (NSE)<a class="headerlink" href="#nmap-scripting-engine-nse" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Safe category - Default:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sC</span> <span class="pre">&lt;host&gt;</span> <span class="pre">Ex:</span> <span class="pre">nmap</span> <span class="pre">-sC</span> <span class="pre">scanme.nmap.org</span></code></p></li>
+<li><p>Execute (multiple) scripts by name:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">&lt;script1,script2&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Select script by category:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">&lt;category&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Execute NSE script file:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">&lt;path/to/script.nse&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Exclude a specific category:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">&quot;not</span> <span class="pre">exploit&quot;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Include two different categories:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">&quot;default</span> <span class="pre">and</span> <span class="pre">discover&quot;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Combining wildcards:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">&quot;http-*</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Set arguments:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">http-useragent</span> <span class="pre">--script-args</span> <span class="pre">http.useragent=&quot;Mozilla/537.36&quot;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Load arguments from a file:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script-args-file</span> <span class="pre">&lt;file&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="scanning-mail-servers">
+<h2>Scanning mail servers<a class="headerlink" href="#scanning-mail-servers" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Brute-force SMTP:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p25</span> <span class="pre">--script</span> <span class="pre">smtp-brute</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Brute-force IMAP:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p143</span> <span class="pre">--script</span> <span class="pre">imap-brute</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Brute-force POP3:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p110</span> <span class="pre">--script</span> <span class="pre">pop3-brute</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Enumerate users:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p25</span> <span class="pre">--script</span> <span class="pre">smtp-enum-users</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>SMTP run on alternate port(s):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p&lt;port&gt;</span> <span class="pre">--script</span> <span class="pre">smtp-ntp-enum</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Discovering open relays:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p&lt;port&gt;</span> <span class="pre">--script</span> <span class="pre">smtp-open-relay</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Find available SMTP commands:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p25</span> <span class="pre">--script</span> <span class="pre">smtp-commands</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="scanning-databases">
+<h2>Scanning databases<a class="headerlink" href="#scanning-databases" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Identify MS SQL servers:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p1433</span> <span class="pre">--script</span> <span class="pre">ms-sql-info</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Brute-force MS SQL passwords:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p1433</span> <span class="pre">--script</span> <span class="pre">ms-sql-brute</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Dump password hashes (MS SQL):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p1433</span> <span class="pre">--script</span> <span class="pre">ms-sql-dump-hashes</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>List databases (MySQL):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p3306</span> <span class="pre">--script</span> <span class="pre">mysql-databases</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Brute-force MySQL passwords:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p3306</span> <span class="pre">--script</span> <span class="pre">mysql-brute</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Identify MongoDB servers:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p27017</span> <span class="pre">--script</span> <span class="pre">mongodb-info</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Brute-force Redis passwords:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p6379</span> <span class="pre">--script</span> <span class="pre">redis-brute</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="scanning-web-servers">
+<h2>Scanning web servers<a class="headerlink" href="#scanning-web-servers" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>List supported HTTP methods:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p80,443</span> <span class="pre">--script</span> <span class="pre">http-methods</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Discover interesting paths/folders:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">http-enum</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Brute-forcing HTTP basic auth:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">http-brute</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Provide own users/password list:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">http-brute</span> <span class="pre">--script-args</span> <span class="pre">userdb=users.txt,passdb=pass.txt</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Detect a Web Application Firewall:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p80</span> <span class="pre">--script</span> <span class="pre">http-waf-detect</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Detect XST vulnerabilities (via HTTP TRACE method):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p80</span> <span class="pre">--script</span> <span class="pre">http-methods</span> <span class="pre">--script-args</span> <span class="pre">http-methods.retest</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Detect XSS vulnerabilities:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">http-sql-injection</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Identify vulnerable web platforms (e.g. WordPress):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--script</span> <span class="pre">http-wordpress-enum</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="ics-scada-systems">
+<h2>ICS/SCADA systems<a class="headerlink" href="#ics-scada-systems" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Detect standard (open) ports:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sU</span> <span class="pre">-p&lt;port-list&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Control system ports (BACnet/IP):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-sU</span> <span class="pre">-p47808</span> <span class="pre">--script</span> <span class="pre">bacnet-info</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Ethernet/IP:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p44818</span> <span class="pre">--script</span> <span class="pre">enip-info</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Discover a Modbus device:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p502</span> <span class="pre">--script</span> <span class="pre">modbus-discover</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Discover a Niagara Fox device:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-p&lt;port&gt;</span> <span class="pre">--script</span> <span class="pre">fox-info</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="generating-reports">
+<h2>Generating reports<a class="headerlink" href="#generating-reports" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Normal output to filename:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-oN</span> <span class="pre">&lt;filename&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Send results to XML format:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-oX</span> <span class="pre">&lt;filename.xml&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Output to all formats (normal, XML &amp; grep):
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-oA</span> <span class="pre">&lt;filename&gt;</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Increase verbosity and debugging level:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">-v</span> <span class="pre">-d</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Display host and port state reasons:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--reason</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Print periodic timing stats:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--stats-every</span> <span class="pre">10s</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Trace packets and data sent and received:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--packet-trace</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>Show open ports only:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--open</span> <span class="pre">&lt;target&gt;</span></code></p></li>
+<li><p>List interfaces and routes:
+<code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">--iflist</span></code></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./cheat-sheets"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Markdown.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Markdown</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CPP-Language.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">C++ Programming Language</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#host-discovery-and-identification">Host discovery and identification</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-scanning">Basic Scanning</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timing-and-performance">Timing and performance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-detection">Version detection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-and-port-scanning">Network and port scanning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nmap-scripting-engine-nse">Nmap Scripting Engine (NSE)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-mail-servers">Scanning mail servers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-databases">Scanning databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-web-servers">Scanning web servers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ics-scada-systems">ICS/SCADA systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-reports">Generating reports</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brianna Laird
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
