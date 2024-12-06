@@ -27,17 +27,23 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    # Build the Jupyter Book
-    - name: Build the Jupyter Book
-      run: jupyter-book build .
+    # Navigate to the `pages` folder and build the Jupyter Book
+    - name: Navigate to the `pages` folder and Build the Jupyter Book
+      run: |
+        cd pages
+        jupyter-book build .
 
     # Ensure the CNAME file is in the built HTML directory
     - name: Add CNAME file
-      run: echo "cheat-sheets.breezy-codes.com" > _build/html/CNAME
+      run: |
+        cd pages
+        echo "cheat-sheets.breezy-codes.com" > _build/html/CNAME
 
     # Upload the book's HTML as an artifact
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
+      run: |
+        cd pages
+        actions/upload-pages-artifact@v2
       with:
         path: "_build/html"
 
