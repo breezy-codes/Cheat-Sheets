@@ -24,3 +24,4 @@ parts:
       - file: cheat-sheets/VS-Code-Shortcuts.md
       - file: cheat-sheets/git-commands.md
       - file: cheat-sheets/git-ignore.md
+      - file: cheat-sheets/git-credential-manager.md
